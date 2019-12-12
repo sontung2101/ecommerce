@@ -8,6 +8,18 @@ git pull : update code từ sever về
 
 fork và merge  
 git reset --hard HEAD
+-----------------------------------
+git push origin --delete [branch name] : 		xoa 1 chi nhanh tu xa
+git push origin [branch name]			Đẩy một nhánh vào kho lưu trữ từ xa của bạn
+git push -u origin [branch name]			Đẩy các thay đổi vào kho lưu trữ từ xa (và nhớ chi nhánh)
+git push					Đẩy các thay đổi vào kho lưu trữ từ xa (nhánh nhớ)
+git push origin --delete [branch name]		Xóa một chi nhánh từ xa
+git pull					Cập nhật kho lưu trữ cục bộ lên bản cam kết mới nhất
+git pull origin [branch name]			Kéo các thay đổi từ kho lưu trữ từ xa
+git remote add origin ssh://git@github.com/[username]/[repository-name].git	Thêm một kho lưu trữ từ xa
+git remote set-url origin ssh://git@github.com/[username]/[repository-name].git	Đặt nhánh gốc của kho lưu trữ thành SSH
+
+---------------------------------
 echo "# ecommerce" >> README.md
 git init
 git add README.md
