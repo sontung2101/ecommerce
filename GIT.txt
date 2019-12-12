@@ -1,0 +1,18 @@
+git clone https://github.com/pytutorial/flask_students
+git status : xem trang thai file
+git diff app.py : xem thay đổi nếu có sẽ hiện màu xanh lá
+
+git checkout app.py  :trở lại ctrl + z	
+
+git pull : update code từ sever về
+
+fork và merge  
+git reset --hard HEAD
+echo "# ecommerce" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/sontung2101/ecommerce.git
+git push -u origin master
+git remote add origin https://github.com/sontung2101/ecommerce.git
+git push -u origin master
