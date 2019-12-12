@@ -16,6 +16,9 @@ git remote add origin https://github.com/sontung2101/ecommerce.git
 git push -u origin master
 git remote add origin https://github.com/sontung2101/ecommerce.git
 git push -u origin master
+
+
+------------------------------------------------
 Ensure you are in the default branch:
 git checkout master
 The rm -r command will recursively remove your folder:
