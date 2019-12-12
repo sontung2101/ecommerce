@@ -1,0 +1,55 @@
+{% load static %}
+<!-- Relate Product -->
+<section class="relateproduct bgwhite p-t-45 p-b-138">
+    <div class="container">
+        <div class="sec-title p-b-60">
+            <h3 class="m-text5 t-center">
+                Related Products
+            </h3>
+        </div>
+
+        <!-- Slide2 -->
+        <div class="wrap-slick2">
+            <div class="slick2">
+                {% for product in products2 %}
+                    <div class="item-slick2 p-l-15 p-r-15">
+                        <!-- Block2 -->
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative {% if product.new == 0 %} block2-labelnew {% elif product.promotion_price != 0 and product.new == 1 %} block2-labelsale {% else %}{% endif %}">
+                                <img src="/media/products/{{ product.image }}" alt="IMG-PRODUCT">
+
+                                <div class="block2-overlay trans-0-4">
+                                    <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        <!-- Button -->
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addcart({{ product.id }})">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block2-txt p-t-20">
+                                <a href="{% url 'product:product-detail' product.id %}" class="block2-name dis-block s-text3 p-b-5">
+                                    {{ product.name }}
+                                </a>
+
+                                {% if product.promotion_price == 0 %}
+                                    <span class="block2-price m-text6 p-r-5">
+									{{ product.unit_price }} VNĐ
+							        	</span>
+                                {% else %}
+                                    <span class="block2-oldprice m-text7 p-r-5">
+                                        {{ product.unit_price }} VNĐ
+                                        </span>
+                                    <span class="block2-newprice m-text8 p-r-5">
+                                    {{ product.promotion_price }} VNĐ
+                                    </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</section>

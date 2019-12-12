@@ -1,0 +1,23 @@
+{% extends 'widgets/base.html' %}
+{% block base %}
+    {% load static %}
+    <!-- Title Page -->
+    <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m"
+             style="background-image: url({% static 'images/heading-pages-06.jpg' %});">
+        <h2 class="l-text2 t-center">
+            Contact
+        </h2>
+    </section>
+
+    <!-- content page -->
+    {% include 'contact/contentPage.html' %}
+
+{% endblock %}
+
+{% block containerSelection %}
+    {% include 'widgets/containerSelection2.html' %}
+{% endblock %}
+
+{% block script %}
+    {% include 'contact/script.html' %}
+{% endblock %}

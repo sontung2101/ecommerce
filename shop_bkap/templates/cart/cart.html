@@ -1,0 +1,35 @@
+{% extends 'widgets/base.html' %}
+
+
+{% block base %}
+    {% load static %}
+    <!-- Title Page -->
+    <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m"
+             style="background-image: url({% static 'images/heading-pages-01.jpg' %});">
+        <h2 class="l-text2 t-center">
+            Cart
+        </h2>
+    </section>
+
+    <!---Total--Cart--->
+    {% if checkout %}
+             <h2 style="margin-left: 550px ; padding: 20px;font-size: 30px;color: #ffa037" class="s-text5">Successful Transaction</h2>
+    {% else %}
+        {% if request.session.cart %}
+            {% include 'cart/totalCart.html' %}
+        {% else %}
+             <h2 style="margin-left: 620px ; padding: 20px;font-size: 30px" class="s-text5">Cart empty</h2>
+        {% endif %}
+
+    {% endif %}
+
+{% endblock %}
+
+
+{% block containerSelection %}
+    {% include 'widgets/containerSelection2.html' %}
+{% endblock %}
+
+{% block script %}
+    {% include 'cart/script.html' %}
+{% endblock %}

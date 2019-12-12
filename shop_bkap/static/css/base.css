@@ -1,0 +1,21 @@
+.category-products {
+    border: 1px solid #F7F7F0;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.panel-group .panel-heading + .panel-collapse .panel-body {
+    border-top: 0 none;
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+.panel-body ul li a {
+    font-size: 14px;
+}
+
+.bg-title-page, .slick-slider {
+    margin-top: -24px;
+}

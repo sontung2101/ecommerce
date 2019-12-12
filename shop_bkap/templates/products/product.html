@@ -1,0 +1,17 @@
+{% extends 'widgets/base.html' %}
+{% load static %}
+{% block base %}
+    <!-- Title Page -->
+    {% include 'products/titlePage.html' %}
+    <!-- Content page -->
+    {% include 'products/contentPage.html' %}
+
+{% endblock %}
+
+{% block containerSelection %}
+    {% include 'widgets/containerSelection2.html' %}
+{% endblock %}
+
+{% block script %}
+    {% include 'products/script.html' %}
+{% endblock %}
