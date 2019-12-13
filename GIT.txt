@@ -1,4 +1,6 @@
 /update 13/12/2019
+/git push origin master -f
+
 git clone https://github.com/pytutorial/flask_students
 git status : xem trang thai file
 git diff app.py : xem thay đổi nếu có sẽ hiện màu xanh lá
