@@ -25,3 +25,6 @@ Commit the change:
 git commit -m "Remove duplicated directory"
 Push the change to your remote repository:
 git push origin master
+
+
+https://stackoverflow.com/questions/48974668/adding-phonenumber-field-to-signup-form-django
