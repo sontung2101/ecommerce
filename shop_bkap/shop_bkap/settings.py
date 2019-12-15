@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'shop_bkap.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_test3',  # new
+        'NAME': 'db_test6',  # new
         'HOST': 'localhost',  # new
         'PORT': '3306',  # new
         'USER': 'root',  # new
@@ -141,3 +141,6 @@ AUTH_USER_MODEL = 'user.CustomerUser'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Absolute path to the media directory
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'

@@ -1,0 +1,8 @@
+{% if user.is_authenticated %}
+ You logged in as {{ user.username }}
+ <a href="{% url 'user:logout' %}">logout</a>
+
+{% else %}
+ <br>
+ <a href="{% url 'user:login' %}">login</a> / <a href="{% url 'user:signup' %}">signup</a>
+{% endif %}

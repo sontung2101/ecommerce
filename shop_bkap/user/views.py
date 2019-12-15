@@ -2,18 +2,39 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.views import View
+from user.models import CustomerUser
 
 
 # Create your views here.
-class loginClass(View):
-    def get(self, request):
-        return render(request, 'user/user.html', )
+def signup(request):
+    error = ''
 
-    def post(self, request):
-        user_name = request.POST.get('tk')
-        pass_word = request.POST.get('mk')
-        my_user = authenticate(username=user_name, password=pass_word)
-        if my_user is None:  # nếu không có my_user trong user của django
-            return HttpResponse('user khong ton tai')
-        login(request, my_user)  # kiểm tra đăng nhập và chuyển trang
-        return HttpResponse('Dang nhap thanh cong')
+    if request.method == 'POST':
+        username = request.POST['username']
+        fullname = request.POST['fullname']
+        phonenumber = request.POST['phonenumber']
+        email = request.POST['username']
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
+
+        if password1 != password2:
+            error = 'Confirmed password does not match'
+        else:
+            try:
+                user = CustomerUser.objects.create_user(
+                    username=username,
+                    full_name=fullname,
+                    phone_number=phonenumber,
+                    email=email,
+                    password=password1)
+
+                user = authenticate(username=username,
+                                    password=password1)
+
+                login(request, user)
+                return HttpResponse('Dang ki thanh cong')
+
+            except Exception as e:
+                error = str(e)
+
+    return render(request, 'registration/signup.html', {'error': error})

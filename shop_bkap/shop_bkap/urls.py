@@ -18,21 +18,15 @@ from django.urls import path, include
 from home import views
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.views.generic.base import TemplateView  # new
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('user/',include('user.urls')),
     path('home/', include('home.urls')),
     path('product/', include('product.urls')),
     path('cart/', include('cart.urls')),
     path('',views.index,name='home'),
-
-    path('admin/', admin.site.urls),
-    path('index/', views.index, name='index'),
-    path('product-detail/', views.productDetail, name='product-detail'),
-    path('contact/', views.contact, name='contact'),
-    path('about/', views.about, name='about'),
-    path('blog/', views.blog, name='blog'),
-    path('blog-detail/', views.blogDetail, name='blog-detail'),
+    # path('', TemplateView.as_view(template_name='index/index.html'), name='home'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

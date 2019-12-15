@@ -1,0 +1,61 @@
+{% extends 'widgets/base.html' %}
+
+
+{% block base %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    {% load static %}
+    <!-- Title Page -->
+    <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m"
+             style="background-image: url({% static 'images/heading-pages-01.jpg' %});">
+        <h2 class="l-text2 t-center">
+            welcome to new member
+        </h2>
+    </section>
+    <form method="post">
+        {% csrf_token %}
+        <div class="row mt-3">
+            <div class="col-md-4 offset-md-4">
+                <div class="card text-center card  bg-default mb-3">
+                    <div class="card-header">
+                        SIGN UP
+                    </div>
+                    <div class="card-body">
+                        <input type="text" class="form-control input-sm chat-input"
+                               placeholder="User name" name="username" value='{{ form.username }}'/>
+                        </br>
+                        <input type="text" class="form-control input-sm chat-input"
+                               placeholder="Full name" name="fullname" value='{{ form.full_name }}'/>
+                        </br>
+                        <input type="text" class="form-control input-sm chat-input"
+                               placeholder="Phone number" name="phonenumber" value='{{ form.phone_number }}'/>
+                        </br>
+                        <input class="form-control input-sm chat-input"
+                               placeholder="Email" name="email" value='{{ form.email }}'/>
+                        </br>
+                        <input class="form-control input-sm chat-input"
+                               placeholder="Password" name="password1" value='{{ form.password1 }}'/>
+                        </br>
+                        <input class="form-control input-sm chat-input"
+                               placeholder="Password again" name="password2" value='{{ form.password2 }}'/>
+                        </br>
+
+                    </div>
+                    <div class="card-footer text-muted">
+                        <input type="submit" class="btn btn-secondary" value='Sign up'>
+                        <a href="{% url 'user:login' %}">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}
+
+{% block containerSelection %}
+    {% include 'widgets/containerSelection2.html' %}
+{% endblock %}
+
+{% block script %}
+    {% include 'user/script.html' %}
+{% endblock %}

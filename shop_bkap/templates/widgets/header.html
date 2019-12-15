@@ -1,5 +1,6 @@
 {% load static %}
 {% load mathfilters %}
+
 <!-- Header desktop -->
 <header class="header1">
     <div class="container-menu-header">
@@ -20,6 +21,7 @@
 					<span class="topbar-email">
 						sontung2101@gmail.com
 					</span>
+
             </div>
         </div>
 
@@ -66,9 +68,16 @@
 
             <!-- Header Icon -->
             <div class="header-icons">
-                <a href="{% url 'user:login' %}" class="header-wrapicon1 dis-block">
-                    <img src="{% static 'images/icons/icon-header-01.png' %}" class="header-icon1" alt="ICON">
-                </a>
+
+                {% if user.is_authenticated %}
+                    <P>Hello </P> &nbsp;
+                    <a href="{% url 'user:home' %}" style="font-size: 15px"> {{ user.full_name }} </a>&nbsp;
+                    <a href="{% url 'user:logout' %}" style="font-size: 15px ;color: #007bff;"> /Log Out</a>
+                {% else %}
+                    <br>
+                    <a href="{% url 'user:login' %}" style="font-size: 15px;color: #007bff; ">Login</a> &nbsp;&nbsp;
+                    &nbsp; <a href="{% url 'user:signup' %}" style="color: #007bff;">Signup</a>
+                {% endif %}
 
                 <span class="linedivide1"></span>
 
@@ -80,23 +89,23 @@
                     <!-- Header cart noti -->
                     <div class="header-cart header-dropdown">
                         {% for key,value in request.session.cart.items %}
-                        <ul class="header-cart-wrapitem">
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="/media/products/{{ value.img }}" alt="IMG">
-                                </div>
+                            <ul class="header-cart-wrapitem">
+                                <li class="header-cart-item">
+                                    <div class="header-cart-item-img">
+                                        <img src="/media/products/{{ value.img }}" alt="IMG">
+                                    </div>
 
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        {{value.name}}
-                                    </a>
+                                    <div class="header-cart-item-txt">
+                                        <a href="#" class="header-cart-item-name">
+                                            {{ value.name }}
+                                        </a>
 
-                                    <span class="header-cart-item-info">
+                                        <span class="header-cart-item-info">
 											{{ value.num }} x {{ value.price }} VNĐ
 										</span>
-                                </div>
-                            </li>
-                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         {% endfor %}
 
                         <div class="header-cart-total">
@@ -106,7 +115,8 @@
                         <div class="header-cart-buttons">
                             <div class="header-cart-wrapbtn">
                                 <!-- Button -->
-                                <a href="{% url 'cart:shoppingcart' %}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                                <a href="{% url 'cart:shoppingcart' %}"
+                                   class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                                     View Cart
                                 </a>
                             </div>
@@ -204,7 +214,8 @@
                         <div class="header-cart-buttons">
                             <div class="header-cart-wrapbtn">
                                 <!-- Button -->
-                                <a href="{% url 'cart:shoppingcart' %}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                                <a href="{% url 'cart:shoppingcart' %}"
+                                   class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                                     View Cart
                                 </a>
                             </div>

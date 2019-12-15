@@ -1,0 +1,52 @@
+{% extends 'widgets/base.html' %}
+
+
+{% block base %}
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% load static %}
+    <!-- Title Page -->
+    <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m"
+             style="background-image: url({% static 'images/heading-pages-01.jpg' %});">
+        <h2 class="l-text2 t-center">
+            Hello world
+        </h2>
+    </section>
+
+    <div class="container mt-3 mb-3">
+        <form method="post" >
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <div class="card text-center card  bg-default mb-3">
+                        <div class="card-header">
+                            LOGIN
+                        </div>
+                        <div class="card-body">
+                            <input type="text" id="userName" class="form-control input-sm chat-input"
+                                   placeholder="Username" name="username"/>
+                            </br>
+                            <input type="password" id="userPassword" class="form-control input-sm chat-input"
+                                   placeholder="Password" name="password"/>
+                        </div>
+                        <div class="card-footer text-muted">
+                             <input type="submit" class="btn btn-secondary" value='Login'>
+                            <a href="{% url 'user:signup' %}">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
+
+{% block containerSelection %}
+    {% include 'widgets/containerSelection2.html' %}
+{% endblock %}
+
+{% block script %}
+    {% include 'registration/script.html' %}
+{% endblock %}
+

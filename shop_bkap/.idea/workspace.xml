@@ -3,9 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="8492aae2-6fe1-49e5-9669-9b0005a4f856" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_bkap/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop_bkap/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_bkap/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop_bkap/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/widgets/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/widgets/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/widgets/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/widgets/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,28 +50,30 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1T2h9YayxHKImnjOSC9kWe3XybI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/dowload/Django_project/LoginDemo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Django_project\shop_bkap\templates\index" />
-      <recent name="E:\Django_project\shop_bkap" />
-      <recent name="E:\Django_project\shop_bkap\app" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GIT\ecommerce\shop_bkap\templates\registration" />
       <recent name="E:\Django_project\shop_bkap\templates\User" />
       <recent name="E:\Django_project\shop_bkap\home\templatetags" />
       <recent name="E:\Django_project\shop_bkap\media\products" />
       <recent name="E:\Django_project\shop_bkap\media\products\accesories" />
-      <recent name="E:\Django_project\shop_bkap\media\products\kids" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Django_project\shop_bkap\templates\index" />
+      <recent name="E:\Django_project\shop_bkap" />
+      <recent name="E:\Django_project\shop_bkap\app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -160,7 +170,8 @@
       <workItem from="1576068016743" duration="4133000" />
       <workItem from="1576113459991" duration="792000" />
       <workItem from="1576208280089" duration="10609000" />
-      <workItem from="1576297671845" duration="3404000" />
+      <workItem from="1576297671845" duration="4830000" />
+      <workItem from="1576375128684" duration="24062000" />
     </task>
     <servers />
   </component>

@@ -9,7 +9,7 @@ from django.views import View
 import datetime
 from cart.models import *
 
-cart ={}
+cart = {}
 
 
 def addcart(request):
@@ -64,6 +64,7 @@ class shoppingcart(View):
     global cart
     global checkout
     checkout = False
+
     def get(self, request):
         total = 0
         carts = request.session.get('cart')
@@ -98,7 +99,7 @@ class shoppingcart(View):
                 del request.session['cart']
                 globals()['cart'] = {}
                 checkout = True
-                return render(request,'cart/cart.html',{'checkout':checkout})
+                return render(request, 'cart/cart.html', {'checkout': checkout})
             else:
                 return render(request, 'cart/cart.html')
 
