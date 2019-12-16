@@ -30,9 +30,8 @@ def signup(request):
 
                 user = authenticate(username=username,
                                     password=password1)
-
                 login(request, user)
-                return HttpResponse('Dang ki thanh cong')
+                return redirect('/')
 
             except Exception as e:
                 error = str(e)

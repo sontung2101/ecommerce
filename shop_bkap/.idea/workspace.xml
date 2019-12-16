@@ -5,13 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_bkap/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop_bkap/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_bkap/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop_bkap/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/widgets/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/widgets/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/widgets/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/widgets/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/totalCart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/totalCart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
@@ -57,7 +52,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/dowload/Django_project/LoginDemo" />
+    <property name="last_opened_file_path" value="E:/dowload/Django_project/djangoForm" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -171,7 +166,10 @@
       <workItem from="1576113459991" duration="792000" />
       <workItem from="1576208280089" duration="10609000" />
       <workItem from="1576297671845" duration="4830000" />
-      <workItem from="1576375128684" duration="24062000" />
+      <workItem from="1576375128684" duration="27419000" />
+      <workItem from="1576411323468" duration="7586000" />
+      <workItem from="1576485132376" duration="2190000" />
+      <workItem from="1576494839899" duration="1630000" />
     </task>
     <servers />
   </component>

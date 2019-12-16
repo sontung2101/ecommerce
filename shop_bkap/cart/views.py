@@ -8,6 +8,7 @@ from django.template.loader import render_to_string
 from django.views import View
 import datetime
 from cart.models import *
+from user.models import CustomerUser
 
 cart = {}
 
@@ -72,8 +73,11 @@ class shoppingcart(View):
             for key, value in carts.items():
                 total += int(value['price']) * int(value['num'])
             order = oderForm()
-            return render(request, 'cart/cart.html', {'total': total, 'order': order})
+            # username = CustomerUser.objects.get(username=request.user.username)
+            # name = username.full_name
+            return render(request, 'cart/cart.html', {'total': total, 'order': order,})
         else:
+            globals()['cart'] = {}
             return render(request, 'cart/cart.html')
 
     def post(self, request):

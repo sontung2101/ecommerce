@@ -1,3 +1,16 @@
+{% extends 'widgets/base.html' %}
+
+
+{% block base %}
+    {% load static %}
+    <!-- Title Page -->
+    <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m"
+             style="background-image: url({% static 'images/heading-pages-01.jpg' %});">
+        <h2 class="l-text2 t-center">
+            Hello world
+        </h2>
+    </section>
+
 {% if user.is_authenticated %}
  You logged in as {{ user.username }}
  <a href="{% url 'user:logout' %}">logout</a>
@@ -6,3 +19,15 @@
  <br>
  <a href="{% url 'user:login' %}">login</a> / <a href="{% url 'user:signup' %}">signup</a>
 {% endif %}
+<h1>Profile of {{ user.full_name }}</h1>
+
+
+{% endblock %}
+
+{% block containerSelection %}
+    {% include 'widgets/containerSelection2.html' %}
+{% endblock %}
+
+{% block script %}
+    {% include 'registration/script.html' %}
+{% endblock %}

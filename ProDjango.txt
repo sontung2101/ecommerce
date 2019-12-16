@@ -1,0 +1,73 @@
+request.GET['name']
+request.GET.get['name',' ']
+request.GET.get['name']
+
+---------------------may ao
+python -m venv env
+env\Scripts\activate
+.\env\Scripts\activate
+deactivate
+-------------------------------------
+1. pip install django
+
+2.django-admin startproject nameProjec
+ 
+3.py manage.py startapp nameApp
+
+4.nameApp->setting
+
+5.trong urls.py 
+ 	+import include
+	+path('app/',include('nameApp.urls'))
+eg:
+from django.contrib import admin
+from django.urls import path,include
+
+urlpatterns = [
+    path('app/',include('nameApp.urls')),
+    path('admin/', admin.site.urls),
+]
+	
+6.tạo urls.py trong app :
+note : thêm app_name = 'tên của app'
+eg:
+from django.urls import path
+from . import views  #new
+app_name = 'app '
+urlpatterns = [
+    path('',views.index,name='index'),
+]
+7. qua views tạo hàm index show "hello world"
+
+eg:
+from django.shortcuts import render
+from django.http import HttpResponse #NEW
+
+def index(request):
+    return HttpResponse('Hello world')
+
+8. tạo templates trong app xong tạo tiếp thư mục con trong templates là tên app
+eg : templates -> app (trong app)
+
+9.tạo models . rối makemigrations và migrate
+
+10.migration trước nhé -> py manage.py createsuperuser 
+vào admin.py tạo lk models bằng  :
+eg:
+from django.contrib import admin
+from.models import Post #NEW
+
+admin.site.register(Post) NEW
+	  
+11.file static tạo tương tự teamplate.riếng dùng mysql dùng thêm code kết nối và cài mysqlclient và pymysql
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'db_banhang',#new
+        'HOST':'localhost',#new
+        'PORT':'3306',#new
+        'USER':'root',#new
+        'PASSWORD':'',#new
+    }
+}
+
