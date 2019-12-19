@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<div class="container mt-3 mb-3">
+    <table class="table table-bordered">
+        <tr>
+            <th class="text-center">Name</th>
+            <th class="text-center">Email</th>
+            <th class="text-center">Phone number</th>
+        </tr>
+        <tr>
+            <td class="text-center">{{ user.full_name }}</td>
+            <td class="text-center">{{ user.email }}</td>
+            <td class="text-center">{{ user.phone_number }}</td>
+    </table>
+    <a href='{% url 'user:edit-profile' %}' class="btn btn-primary">
+        Edit profile
+    </a>
+</div>

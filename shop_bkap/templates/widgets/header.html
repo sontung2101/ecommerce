@@ -69,10 +69,9 @@
             <!-- Header Icon -->
             <div class="header-icons">
 
-                {% if user.is_authenticated %}
-                    <P>Hello </P> &nbsp;
-                    <a href="{% url 'user:home' %}" style="font-size: 15px"> {{ user.full_name }} </a>&nbsp;
-                    <a href="{% url 'user:logout' %}" style="font-size: 15px ;color: #007bff;"> /Log Out</a>
+                {% if user.is_authenticated %}&nbsp;
+                     <p><a href="{% url 'user:home' %}" style="font-size: 15px"> <p> {{ user.full_name }}</p> </a></p>&nbsp;
+                    <p><a href="{% url 'user:logout' %}" style="font-size: 15px ;color: #007bff;"> <p> /Log Out </p></a></p>
                 {% else %}
                     <br>
                     <a href="{% url 'user:login' %}" style="font-size: 15px;color: #007bff; ">Login</a> &nbsp;&nbsp;

@@ -62,7 +62,7 @@
 						Total:
 					</span>
 
-                <span class="m-text21 w-size20 w-full-sm" >
+                <span class="m-text21 w-size20 w-full-sm">
 						{{ total }} VNĐ
 					</span>
             </div>
@@ -73,21 +73,41 @@
         <form action="" method="post">
             {% csrf_token %}
             <div class=" bo9 p-l-40 p-r-40 p-t-30 p-b-38 m-t-30 m-r-0 m-l-auto p-lr-15-sm " style="width: fit-content;">
-                    <h3 class="m-text20 p-b-24" style="margin-left: 140px ; font-size: 30px">
-                        Shipping  {{user.username}}
-                    </h3>
-                    <p>{{ name }}</p>
-                    <p>{{ order.name }}</p>
-                    <p>{{ order.email }}</p>
-                    <p>{{ order.address }}</p>
-                    <p>{{ order.phone_number }}</p>
-                    <p>{{ order.note }}</p>
-                    <div class="size15 trans-0-4">
-                        <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" >
-                            Proceed to Checkout
-                        </button>
-                    </div>
+                <h3 class="m-text20 p-b-24" style="margin-left: 140px ; font-size: 30px">
+                    Shipping
+                </h3>
+                 {% if user.is_authenticated %}&nbsp;
+                    <p><input type="hidden" name="customeruser_id" value="{{ user.id }}" id="id_customeruser_id"></p>
+                 {% else %}
+
+                 {% endif %}
+                <p><input type="text" name="name" value="{{ user.full_name }}"
+                          class="size13 bo4 m-b-12 sizefull s-text7 p-l-15 p-r-15" placeholder="Name"
+                          style="border:1px solid #e6e6e6 !important ;max-width:500px;height :50px;padding: 7px ; font-size :20px "
+                          maxlength="255" required id="id_name"></p>
+                <p><input type="text" name="email" value="{{ user.email }}" class="size13 bo4 m-b-12 sizefull s-text7 p-l-15 p-r-15"
+                          placeholder="Email"
+                          style="border:1px solid #e6e6e6 !important;max-width:500px;height :50px; padding: 7px ; font-size :20px"
+                          maxlength="50" required id="id_email"></p>
+                <p><input type="text" name="address" class="size13 bo4 m-b-12 sizefull s-text7 p-l-15 p-r-15"
+                          placeholder="Address"
+                          style="border:1px solid #e6e6e6 !important ;max-width:500px;height :70px; padding: 7px ; font-size :20px"
+                          maxlength="100" required id="id_address"></p>
+                <p><input type="text" name="phone_number" value="{{ user.phone_number }}" class="size13 bo4 m-b-12 sizefull s-text7 p-l-15 p-r-15"
+                          placeholder="Phone number"
+                          style="border:1px solid #e6e6e6 !important;max-width:500px;height :50px; padding: 7px ; font-size :20px"
+                          maxlength="20" required id="id_phone_number"></p>
+                <p><textarea name="note" cols="40" rows="10" class="size13 bo4 m-b-12 sizefull s-text7 p-l-15 p-r-15"
+                             placeholder="Note"
+                             style="border:1px solid #e6e6e6 !important ;max-width:500px;height :50px; padding: 7px ; font-size :20px;height:200px;resize: none;"
+                             maxlength="255" id="id_note">
+</textarea></p>
+                <div class="size15 trans-0-4">
+                    <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
+                        Proceed to Checkout
+                    </button>
                 </div>
+            </div>
         </form>
     </div>
 </section>

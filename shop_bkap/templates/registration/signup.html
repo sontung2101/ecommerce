@@ -20,6 +20,7 @@
                     <div class="card-header">
                         SIGN UP
                     </div>
+                    <span style='color:red'>{{ error }} </span>
                     <div class="card-body">
                         <input type="text" class="form-control input-sm chat-input"
                                placeholder="User name" name="username" value='{{ form.username }}'/>
@@ -34,10 +35,10 @@
                                placeholder="Email" name="email" value='{{ form.email }}'/>
                         </br>
                         <input class="form-control input-sm chat-input"
-                               placeholder="Password" name="password1" value='{{ form.password1 }}'/>
+                               placeholder="Password" type="password" name="password1" value='{{ form.password1 }}'/>
                         </br>
                         <input class="form-control input-sm chat-input"
-                               placeholder="Password again" name="password2" value='{{ form.password2 }}'/>
+                               placeholder="Password again" type="password" name="password2" value='{{ form.password2 }}'/>
                         </br>
 
                     </div>
@@ -57,5 +58,5 @@
 {% endblock %}
 
 {% block script %}
-    {% include 'user/script.html' %}
+    {% include 'registration/script.html' %}
 {% endblock %}

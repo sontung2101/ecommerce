@@ -72,18 +72,22 @@ class shoppingcart(View):
         if carts:
             for key, value in carts.items():
                 total += int(value['price']) * int(value['num'])
-            order = oderForm()
+            # order = oderForm()
             # username = CustomerUser.objects.get(username=request.user.username)
             # name = username.full_name
-            return render(request, 'cart/cart.html', {'total': total, 'order': order,})
+            return render(request, 'cart/cart.html', {'total': total}) #{'order':order}
         else:
             globals()['cart'] = {}
             return render(request, 'cart/cart.html')
 
     def post(self, request):
-        phone_number = request.POST.get('phone_number')
-        partner = Partner.objects.filter(phone_number=phone_number).first()
-        order = oderForm(request.POST, instance=partner)
+        id_partner = request.POST.get('customeruser_id')
+        if id_partner is None:
+            phone_number = request.POST.get('phone_number')
+            partner = Partner.objects.filter(phone_number=phone_number).first()
+            order = oderForm(request.POST, instance=partner)
+        else:
+            order = oderForm(request.POST)
         if order.is_valid():
             partner = order.save()
             total = 0
