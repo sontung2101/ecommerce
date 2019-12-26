@@ -1,6 +1,7 @@
 <!-- Content page -->
 {% load static %}
 {% load custom_filter %}
+{% load humanize %}
 <section class="bgwhite p-t-55 p-b-65">
     <div class="container">
         <div class="row">
@@ -140,14 +141,14 @@
 
                                     {% if product.promotion_price == 0 %}
                                         <span class="block2-price m-text6 p-r-5">
-									{{ product.unit_price }} VNĐ
+									{{ product.unit_price|intcomma }} VNĐ
 							        	</span>
                                     {% else %}
                                         <span class="block2-oldprice m-text7 p-r-5">
-                                        {{ product.unit_price }} VNĐ
+                                        {{ product.unit_price|intcomma }} VNĐ
                                         </span>
                                         <span class="block2-newprice m-text8 p-r-5">
-                                    {{ product.promotion_price }} VNĐ
+                                    {{ product.promotion_price|intcomma }} VNĐ
                                     </span>
                                     {% endif %}
                                 </div>

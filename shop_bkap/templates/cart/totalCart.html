@@ -1,5 +1,6 @@
 {% load static %}
 {% load mathfilters %}
+{% load humanize %}
 <section class="cart bgwhite p-t-70 p-b-100">
     <div class="container">
         <!-- Cart item -->
@@ -24,7 +25,7 @@
                             </td>
                             <td class="column-3">{{ value.name }}</td>
                             <td class="column-2"
-                                style="font-family: Montserrat-Regular;font-size: 18px;">{{ value.price }} VNĐ
+                                style="font-family: Montserrat-Regular;font-size: 18px;">{{ value.price|intcomma  }} VNĐ
                             </td>
                             <td class="column-4">
                                 <div class="flex-w bo5 of-hidden w-size17">
@@ -40,7 +41,7 @@
                                 </div>
                             </td>
                             <td class="column-2 "
-                                style="font-family: Montserrat-Regular;font-size: 18px;">{{ value.price|mul:value.num }}
+                                style="font-family: Montserrat-Regular;font-size: 18px;">{{ value.price|mul:value.num|intcomma }}
                                 VNĐ
                             </td>
                         </tr>
@@ -56,7 +57,7 @@
 					</span>
 
                 <span class="m-text21 w-size20 w-full-sm">
-						{{ total }} VNĐ
+						{{ total|intcomma }} VNĐ
 					</span>
             </div>
         </div>
