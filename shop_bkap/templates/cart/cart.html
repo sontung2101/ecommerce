@@ -13,12 +13,16 @@
 
     <!---Total--Cart--->
     {% if checkout %}
-             <h2 style="margin-left: 550px ; padding: 20px;font-size: 30px;color: #ffa037" class="s-text5">Successful Transaction</h2>
+        <div class="text-center pt-3 pb-3">
+             <h2 style="font-size: 30px;color: #007bff" class="s-text5">Successful Transaction</h2>
+        </div>
     {% else %}
         {% if request.session.cart %}
             {% include 'cart/totalCart.html' %}
         {% else %}
-             <h2 style="margin-left: 620px ; padding: 20px;font-size: 30px" class="s-text5">Cart empty</h2>
+            <div class="text-center pt-3 pb-3">
+             <h2 style="font-size: 30px" class="s-text5">Cart empty</h2>
+            </div>
         {% endif %}
 
     {% endif %}

@@ -3,18 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="8492aae2-6fe1-49e5-9669-9b0005a4f856" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cart/totalCart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/totalCart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/script.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/order_management_son.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/order_management_son.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/widgets/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/widgets/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/widgets/containerSelection2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/widgets/containerSelection2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/widgets/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/widgets/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,18 +58,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/BKAP/laptop" />
+    <property name="last_opened_file_path" value="E:/dowload/Django_project/LoginDemo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GIT\ecommerce\shop_bkap\static\images\icons" />
       <recent name="E:\GIT\ecommerce\shop_bkap\templates\registration" />
       <recent name="E:\Django_project\shop_bkap\templates\User" />
       <recent name="E:\Django_project\shop_bkap\home\templatetags" />
       <recent name="E:\Django_project\shop_bkap\media\products" />
-      <recent name="E:\Django_project\shop_bkap\media\products\accesories" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Django_project\shop_bkap\templates\index" />
@@ -180,7 +180,18 @@
       <workItem from="1576504456277" duration="1124000" />
       <workItem from="1576548082982" duration="22224000" />
       <workItem from="1576630973420" duration="28557000" />
-      <workItem from="1576718621182" duration="18043000" />
+      <workItem from="1576718621182" duration="19787000" />
+      <workItem from="1576746046161" duration="786000" />
+      <workItem from="1576808943308" duration="4021000" />
+      <workItem from="1576812987590" duration="13197000" />
+      <workItem from="1576835266654" duration="937000" />
+      <workItem from="1576894988232" duration="3324000" />
+      <workItem from="1576937424391" duration="1014000" />
+      <workItem from="1577189010386" duration="4709000" />
+      <workItem from="1577194752008" duration="5125000" />
+      <workItem from="1577237599234" duration="10462000" />
+      <workItem from="1577324686965" duration="1343000" />
+      <workItem from="1577326134841" duration="14826000" />
     </task>
     <servers />
   </component>

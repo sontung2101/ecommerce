@@ -58,24 +58,83 @@ def addcart(request):
         cartInfo = request.session['cart']
         html = render_to_string('cart/addcart.html', {'cart': cartInfo})
 
-    return HttpResponse(html)
+    return HttpResponse('ok')
 
+
+def deleteCart(request, product_cart_id):
+    pr = str(product_cart_id)
+    del request.session['cart'][pr]
+    # del globals()['cart'][pr]
+    request.session['cart'] = request.session['cart']
+    return redirect('cart:shoppingcart')
+
+
+def updateCart(request):
+    if request.is_ajax():
+        cart = request.session['cart']
+        id = request.POST.get('id')
+        num = request.POST.get('num')
+        check = request.POST.get('check')
+        proDetail = Products.objects.get(pk=id)
+        if num == '1' and check == '2':
+            del request.session['cart'][id]
+            request.session['cart'] = request.session['cart']
+            return redirect('cart:shoppingcart')
+        if proDetail.promotion_price == 0:
+            if id in cart.keys():
+                if check =='1':
+                    itemCart = {
+                        'id': proDetail.id,
+                        'name': proDetail.name,
+                        'price': proDetail.unit_price,
+                        'img': str(proDetail.image),
+                        'num': int(num) + 1
+                    }
+                else:
+                    itemCart = {
+                        'id': proDetail.id,
+                        'name': proDetail.name,
+                        'price': proDetail.unit_price,
+                        'img': str(proDetail.image),
+                        'num': int(num) - 1
+                    }
+        else:
+            if id in cart.keys():
+                if check =='1':
+                    itemCart = {
+                        'id': proDetail.id,
+                        'name': proDetail.name,
+                        'price': proDetail.promotion_price,
+                        'img': str(proDetail.image),
+                        'num': int(num) + 1
+                    }
+                else:
+                    itemCart = {
+                        'id': proDetail.id,
+                        'name': proDetail.name,
+                        'price': proDetail.promotion_price,
+                        'img': str(proDetail.image),
+                        'num': int(num) - 1
+                    }
+        cart[id] = itemCart
+        globals()['cart'][id] = itemCart
+        request.session['cart'] = cart
+
+        return redirect('cart:shoppingcart')
 
 class shoppingcart(View):
-    global cart
     global checkout
     checkout = False
 
     def get(self, request):
+        # print(request.session.get('cart'))
         total = 0
         carts = request.session.get('cart')
         if carts:
             for key, value in carts.items():
                 total += int(value['price']) * int(value['num'])
-            # order = oderForm()
-            # username = CustomerUser.objects.get(username=request.user.username)
-            # name = username.full_name
-            return render(request, 'cart/cart.html', {'total': total}) #{'order':order}
+            # print(carts)
+            return render(request, 'cart/cart.html', {'total': total})
         else:
             globals()['cart'] = {}
             return render(request, 'cart/cart.html')

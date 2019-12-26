@@ -27,8 +27,9 @@
 
         <div class="wrap_header">
             <!-- Logo -->
-            <a href="/home" class="logo">
-                <img src="{% static 'images/icons/logo.png' %}" alt="IMG-LOGO">
+            <a href="/home" class="logo mt-2">
+                <img src="{% static 'images/icons/logo3.png' %}"
+                     style="max-width: 300px;max-height: 300px;margin-left: 60px;" alt="IMG-LOGO">
             </a>
 
             <!-- Menu -->
@@ -70,12 +71,14 @@
             <div class="header-icons">
 
                 {% if user.is_authenticated %}&nbsp;
-                     <p><a href="{% url 'user:home' %}" style="font-size: 15px"> <p> {{ user.full_name }}</p> </a></p>&nbsp;
-                    <p><a href="{% url 'user:logout' %}" style="font-size: 15px ;color: #007bff;"> <p> /Log Out </p></a></p>
+                    <p><a href="{% url 'user:home' %}" style="font-size: 17px"> <p> {{ user.full_name }}</p> </a></p>
+                    &nbsp;
+                    <p><a href="{% url 'user:logout' %}" style="font-size: 17px ;color: #007bff;"> <p> /Log Out </p></a>
+                    </p>
                 {% else %}
                     <br>
-                    <a href="{% url 'user:login' %}" style="font-size: 15px;color: #007bff; ">Login</a> &nbsp;&nbsp;
-                    &nbsp; <a href="{% url 'user:signup' %}" style="color: #007bff;">Signup</a>
+                    <a href="{% url 'user:login' %}" style="font-size: 17px;color: #007bff; ">Login</a> &nbsp;&nbsp;
+                    &nbsp; <a href="{% url 'user:signup' %}" style="color: #007bff;font-size: 17px">Signup</a>
                 {% endif %}
 
                 <span class="linedivide1"></span>
@@ -133,20 +136,17 @@
         </div>
     </div>
     <!-- Header Mobile -->
-    <div class="wrap_header_mobile">
+    <div class="container-fluid text-center">
         <!-- Logo moblie -->
-        <a href="../index/index.html" class="logo-mobile">
-            <img src="{% static 'images/icons/logo.png' %}" alt="IMG-LOGO">
+        <a href="{% url 'home:index' %}" class="logo-mobile mb-1">
+            <img src="{% static 'images/icons/logo4.png' %}" style="max-height: 124px;" alt="IMG-LOGO">
         </a>
-
+    </div>
+    <div class="wrap_header_mobile" style="margin-left: 270px;  margin-top: -55px;">
         <!-- Button show menu -->
         <div class="btn-show-menu">
             <!-- Header Icon mobile -->
             <div class="header-icons-mobile">
-                <a href="#" class="header-wrapicon1 dis-block">
-                    <img src="{% static 'images/icons/icon-header-01.png' %}" class="header-icon1" alt="ICON">
-                </a>
-
                 <span class="linedivide2"></span>
 
                 <div class="header-wrapicon2">
@@ -235,6 +235,15 @@
 						<span class="hamburger-inner"></span>
 					</span>
             </div>
+        </div>
+        <div class="" style="margin-top: -34px;margin-bottom: 20px;margin-left: -20px;">
+            {% if user.is_authenticated %}&nbsp;
+                <p><a href="{% url 'user:home' %}" style="font-size: 15px"> <p>{{ user.full_name }}</p> </a></p>
+            {% else %}
+                <br>
+                <a href="{% url 'user:login' %}" style="font-size: 15px;color: #007bff; ">Login</a> &nbsp;/
+                &nbsp; <a href="{% url 'user:signup' %}" style="color: #007bff;">Signup</a>
+            {% endif %}
         </div>
     </div>
     <!-- Menu Mobile -->

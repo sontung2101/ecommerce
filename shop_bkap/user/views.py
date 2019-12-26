@@ -57,6 +57,7 @@ class editProfile(View):
             user.save()
         except Exception as e:
             err = str(e)
+            print(err)
         return render(request, 'home.html', {'err': err})
 
 
