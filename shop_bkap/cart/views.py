@@ -133,7 +133,6 @@ class shoppingcart(View):
         if carts:
             for key, value in carts.items():
                 total += int(value['price']) * int(value['num'])
-            # print(carts)
             return render(request, 'cart/cart.html', {'total': total})
         else:
             globals()['cart'] = {}

@@ -1,8 +1,12 @@
 {% extends 'widgets/base.html' %}
-
-
 {% block base %}
     {% load static %}
+    <style>
+        p {
+            margin-top: 0;
+            margin-bottom: 0rem !important;
+        }
+    </style>
     <!-- Title Page -->
     <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m"
              style="background-image: url({% static 'images/heading-pages-01.jpg' %});">
@@ -14,20 +18,21 @@
     {% if user.is_authenticated %}
         {# You logged in as {{ user.username }}#}
         <div class="container mt-3 ">
-            <h3 style="float: left;font-family: 'Montserrat-Regular'">Hello,</h3>
-            <h3 class="text-left mt-3" style="color: red;font-family: 'Montserrat-Regular'">{{ user.full_name }}</h3>
+            <h2 style="float: left;font-family: 'Montserrat-Regular'">Hello,</h2>
+            <h2 class="text-left mt-3" style="color: red;font-family: 'Montserrat-Regular'">{{ user.full_name }}</h2>
         </div>
         {% include 'user/profile.html' %}
         <div class="container mb-3">
-            <p class="mt-0 mb-0">----------------------------------------------------------</p>
-            <a href="{% url 'user:order-management' %}" style=" font-size:20px;font-family: 'Montserrat-Regular'">Order management</a><br>
-            <a href="{% url 'user:password_change' %}" style=" font-size:20px;font-family: 'Montserrat-Regular'">Change password</a><br>
+            <p class="mt-0 mb-0">------------------------------------------------------</p>
+            <a href="{% url 'user:order-management' %}" style=" font-size:20px;font-family: 'Montserrat-Regular'">Order
+                management</a><br>
+            <a href="{% url 'user:password_change' %}" style=" font-size:20px;font-family: 'Montserrat-Regular'">Change
+                password</a><br>
             <a href="{% url 'user:logout' %}" style="font-size: 20px">logout</a>
         </div>
     {% else %}
         <div class="container mt-3 text-center mb-3">
-            <a href="{% url 'user:login' %}" style="font-size: 20px">login</a> / <a href="{% url 'user:signup' %}"
-                                                                                    style="font-size: 20px">signup</a>
+            <a href="{% url 'user:login' %}" style="font-size: 20px">login</a> / <a href="{% url 'user:signup' %}" style="font-size: 20px">signup</a>
         </div>
     {% endif %}
 

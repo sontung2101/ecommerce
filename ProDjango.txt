@@ -1,3 +1,12 @@
+TIME_ZONE = 'Asia/Ho_Chi_Minh'
+LANGUAGE_CODE = 'vi-vn'
+STATICFILES_DIRS =[
+    os.path.join(BASE_DIR,"static"),
+] 
+
+os.path.join(BASE_DIR,'templates')
+..............................
+
 request.GET['name']
 request.GET.get['name',' ']
 request.GET.get['name']

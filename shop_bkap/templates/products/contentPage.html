@@ -73,14 +73,20 @@
                         </div>
                     </div>
 
-                    <div class="search-product pos-relative bo4 of-hidden">
-                        <input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product"
-                               placeholder="Search Products...">
 
-                        <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
-                            <i class="fs-12 fa fa-search" aria-hidden="true"></i>
-                        </button>
+                    <div class="search-product pos-relative bo4 of-hidden">
+                        <form action="{% url 'product:search-product' %}" method="GET">
+{#                            {% csrf_token %}#}
+                            <input class="s-text7 size6 p-l-23 p-r-50" type="text" value="{{product_name    }}" name="search-product"
+                                   placeholder="Search Products...">
+
+                            <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
+                                <i class="fs-12 fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </form>
                     </div>
+
+
                 </div>
             </div>
 
@@ -110,7 +116,7 @@
                         </div>
                     </div>
 
-                    <span class="s-text8 p-t-5 p-b-5">
+                    <span class="s-text8 p-t-5 p-b-5" style="color: #007bff ;font-size: 18px">
                         Search found   {{ count }} results
                     </span>
                 </div>
@@ -127,7 +133,8 @@
                                     <div class="block2-overlay trans-0-4">
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
                                             <!-- Button -->
-                                            <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addcart({{ product.id }})">
+                                            <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4"
+                                                    onclick="addcart({{ product.id }})">
                                                 Add to Cart
                                             </button>
                                         </div>
@@ -135,7 +142,8 @@
                                 </div>
 
                                 <div class="block2-txt p-t-20">
-                                    <a href="{% url 'product:product-detail' product.id %}" class="block2-name dis-block s-text3 p-b-5">
+                                    <a href="{% url 'product:product-detail' product.id %}"
+                                       class="block2-name dis-block s-text3 p-b-5">
                                         {{ product.name }}
                                     </a>
 
@@ -156,25 +164,25 @@
                         </div>
                     {% endfor %}
                 </div>
-
-                    <div class="pagination flex-m flex-w p-t-26 ">
+                <div class="pagination flex-m flex-w p-t-26 ">
                             <span class="step-links">
                                 {% if products.has_previous %}
-                                    <a href="?page=1">&laquo; first</a>
-                                    <a href="?page={{ products.previous_page_number }}">previous</a>
+                                    <a href="?page=1" style="font-size: 17px">&laquo; first</a>
+                                    <a href="?page={{ products.previous_page_number }} " style="font-size: 17px">previous</a>
                                 {% endif %}
-
-                                <span class="current">
+                                {% if check_search == None %}
+                                <p class="current" style="float: left;font-size: 17px;color: #007bff">
                                     Page {{ products.number }} of {{ products.paginator.num_pages }}.
-                                </span>
+                                </p>
+                                {% endif %}
 
                                 {% if products.has_next %}
-                                    <a href="?page={{ products.next_page_number }}">next</a>
-                                    <a href="?page={{ products.paginator.num_pages }}">last &raquo;</a>
+                                    <a href="?page={{ products.next_page_number }}" style="font-size: 17px">next</a>
+                                    <a href="?page={{ products.paginator.num_pages }} " style="font-size: 17px">last &raquo;</a>
                                 {% endif %}
                             </span>
-                    </div>
+                </div>
+            </div>
         </div>
-    </div>
     </div>
 </section>

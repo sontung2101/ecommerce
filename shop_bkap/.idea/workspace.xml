@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8492aae2-6fe1-49e5-9669-9b0005a4f856" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../ProDjango.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ProDjango.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop_bkap/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop_bkap/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_bkap/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop_bkap/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cart/totalCart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/totalCart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/productDetail/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/productDetail/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/productDetail/relateProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/productDetail/relateProduct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/products/contentPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/contentPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/order_management_son.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/order_management_son.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/script.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/script.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/password_change_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/password_change_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/password_change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/password_change_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/edit_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/order_management.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/order_management.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/widgets/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/widgets/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/widgets/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/widgets/header.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,24 +65,24 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/dowload/Django_project/LoginDemo" />
+    <property name="last_opened_file_path" value="E:/BKAP/Projectbach" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Django_project\shop_bkap\templates\index" />
+      <recent name="E:\Django_project\shop_bkap" />
+      <recent name="E:\Django_project\shop_bkap\app" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\GIT\ecommerce\shop_bkap\static\images\icons" />
       <recent name="E:\GIT\ecommerce\shop_bkap\templates\registration" />
       <recent name="E:\Django_project\shop_bkap\templates\User" />
       <recent name="E:\Django_project\shop_bkap\home\templatetags" />
       <recent name="E:\Django_project\shop_bkap\media\products" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Django_project\shop_bkap\templates\index" />
-      <recent name="E:\Django_project\shop_bkap" />
-      <recent name="E:\Django_project\shop_bkap\app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -186,7 +198,15 @@
       <workItem from="1577194752008" duration="5125000" />
       <workItem from="1577237599234" duration="10462000" />
       <workItem from="1577324686965" duration="1343000" />
-      <workItem from="1577326134841" duration="15999000" />
+      <workItem from="1577326134841" duration="16264000" />
+      <workItem from="1577411397860" duration="18867000" />
+      <workItem from="1577452424781" duration="3945000" />
+      <workItem from="1577537674277" duration="40000" />
+      <workItem from="1577714793314" duration="19000" />
+      <workItem from="1577929691785" duration="13689000" />
+      <workItem from="1578189323631" duration="4801000" />
+      <workItem from="1578298251083" duration="1589000" />
+      <workItem from="1578446846808" duration="3619000" />
     </task>
     <servers />
   </component>
