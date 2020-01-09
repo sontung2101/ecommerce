@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'product',
     'user',
     'mathfilters',
+    'adminshop',
 ]
 
 MIDDLEWARE = [
