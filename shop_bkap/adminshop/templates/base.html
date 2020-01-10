@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HiImST-Admin</title>
-
+    <link rel="icon" type="image/png" href="{% static 'images/icons/logo2.png' %}"/>
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/datepicker3.css' %}" rel="stylesheet">
     <link href="{% static 'css/styles.css' %}" rel="stylesheet">
@@ -49,8 +49,8 @@
         <li class="active"><a href="{% url 'adminshop:quantri' %}"><span class="glyphicon glyphicon-dashboard"></span>
             Trang chủ</a></li>
         <li class="parent ">
-            <a href="#">
-                <span class="glyphicon glyphicon-list"></span> Quản lý đơn hàng <span data-toggle="collapse"
+            <a href="#sub-item-1" data-toggle="collapse">
+                <span  class="glyphicon glyphicon-list"></span> Quản lý đơn hàng <span data-toggle="collapse"
                                                                                       href="#sub-item-1"
                                                                                       class="icon pull-right"><em
                     class="glyphicon glyphicon-s glyphicon-plus"></em></span>
@@ -62,17 +62,17 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="#">
+                    <a class="" href="{% url 'adminshop:tat-ca-duyet-don' %}">
                         <span class="glyphicon glyphicon-share-alt"></span> Duyệt đơn hàng
                     </a>
                 </li>
                 <li>
-                    <a class="" href="#">
+                    <a class="" href="{% url 'adminshop:tat-ca-don-da-duyet' %}">
                         <span class="glyphicon glyphicon-share-alt"></span> Đơn đã duyệt
                     </a>
                 </li>
                 <li>
-                    <a class="" href="#">
+                    <a class="" href="{% url 'adminshop:tat-ca-don-da-huy' %}">
                         <span class="glyphicon glyphicon-share-alt"></span> Đơn đã hủy
                     </a>
                 </li>
@@ -80,7 +80,7 @@
             </ul>
         </li>
         <li class="parent ">
-            <a href="#">
+            <a data-toggle="collapse" href="#sub-item-3">
                 <span class="glyphicon glyphicon-list"></span> Quản lý sản phẩm <span data-toggle="collapse"
                                                                                       href="#sub-item-3"
                                                                                       class="icon pull-right"><em
@@ -119,6 +119,39 @@
 <script src="{% static 'js/easypiechart.js' %}"></script>
 <script src="{% static 'js/easypiechart-data.js' %}"></script>
 <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+<script>
+    function duyetDon(id) {
+        $.post('/quantri/duyet_don', {
+            'id': id,
+            'csrfmiddlewaretoken': '{{csrf_token}}'
+        }, function (data) {
+            location.reload();
+        });
+        {#alert(id )#}
+    }
+</script>
+<script>
+    function huyDuyet(id) {
+        $.post('/quantri/huy_duyet', {
+            'id': id,
+            'csrfmiddlewaretoken': '{{csrf_token}}'
+        }, function (data) {
+            location.reload();
+        });
+        {#alert(id )#}
+    }
+</script>
+<script>
+    function boHuyDon(id) {
+        $.post('/quantri/bo_huy_don', {
+            'id': id,
+            'csrfmiddlewaretoken': '{{csrf_token}}'
+        }, function (data) {
+            location.reload();
+        });
+        {#alert(id )#}
+    }
+</script>
 <script>
     $('#calendar').datepicker({});
 

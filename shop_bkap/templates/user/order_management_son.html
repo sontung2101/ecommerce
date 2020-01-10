@@ -15,7 +15,7 @@
             {% for ct in od.cart_set.all %}
 
                 <tr>
-                    <td class="text-center ">MH00{{ od.id }}</td>
+                    <td class="text-center ">MH00{{ ct.id }}</td>
 
                     <td>
                         {% for ci in ct.cartitem_set.all %}

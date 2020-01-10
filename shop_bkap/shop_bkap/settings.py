@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'shop_bkap.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_test6',  # new
+        'NAME': 'db_test7',  # new
         'HOST': 'localhost',  # new
         'PORT': '3306',  # new
         'USER': 'root',  # new

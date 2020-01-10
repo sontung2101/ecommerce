@@ -3,6 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="8492aae2-6fe1-49e5-9669-9b0005a4f856" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminshop/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminshop/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminshop/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminshop/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminshop/templates/login-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminshop/templates/login-admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminshop/templates/order-management.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminshop/templates/order-management.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminshop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminshop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminshop/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop_bkap/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop_bkap/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/order_management_son.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/order_management_son.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +55,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/dowload/Django_project/LoginDemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -193,7 +202,8 @@
       <workItem from="1578544165801" duration="305000" />
       <workItem from="1578544483652" duration="373000" />
       <workItem from="1578545200254" duration="615000" />
-      <workItem from="1578546300994" duration="257000" />
+      <workItem from="1578546300994" duration="7373000" />
+      <workItem from="1578622587461" duration="21973000" />
     </task>
     <servers />
   </component>

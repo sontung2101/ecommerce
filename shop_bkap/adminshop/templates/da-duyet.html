@@ -6,13 +6,13 @@
         <div class="row">
             <ol class="breadcrumb">
                 <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-                <li class="active">Quản lý đơn hàng</li>
+                <li class="active">Đơn đã duyệt</li>
             </ol>
         </div><!--/.row-->
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="page-header text-center" style="color: #30a5ff"><img
-                        src="{% static 'images/icons/logo2.png' %}" style="max-height: 50px" alt="">Tất cả đơn hàng<img
+                        src="{% static 'images/icons/logo2.png' %}" style="max-height: 50px" alt="">Tất cả đơn đã duyệt<img
                         src="{% static 'images/icons/logo2.png' %}" style="max-height: 50px" alt=""></h2>
                  <div style="margin-bottom: 5px">
                     <a href="{% url 'adminshop:tat-ca-duyet-don' %}" class="btn btn-primary">Đơn chưa duyệt</a>
@@ -58,7 +58,7 @@
                                 {% elif od.active == True and od.cancel == False %}
                                     <a href="{% url 'adminshop:order-detail' od.id %}" class="btn btn-danger">Đã duyệt</a>
                                 {% elif od.active == False and od.cancel == True %}
-                                    <a href="{% url 'adminshop:order-detail' od.id %}" class="btn btn-warning" >Đã hủy</a>
+                                    <a href="{% url 'adminshop:order-detail' od.id %}" class="btn btn-default" style="color: red">Đã hủy</a>
                                  {% elif od.active == True and od.cancel == True %}
                                    <h5 style="color: red">404_error</h5>
                                 {% endif %}
