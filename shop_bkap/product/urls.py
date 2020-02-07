@@ -6,5 +6,5 @@ urlpatterns = [
     path('productsale',views.productSale,name='product-sale'),
     path('', views.product, name='product'),
     path('<int:question_id>', views.productPro, name='product-pro'),
-    path('search_product',views.searchProduct,name ='search-product')
+    # path('search_product',views.searchProduct,name ='search-product')
 ]

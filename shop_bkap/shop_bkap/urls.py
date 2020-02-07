@@ -19,6 +19,7 @@ from home import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic.base import TemplateView  # new
+from django.forms import modelformset_factory
 urlpatterns = [
     path('quantri/',include('adminshop.urls')),
     path('admin/', admin.site.urls),

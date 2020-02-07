@@ -13,4 +13,8 @@ urlpatterns = [
     path('tat_ca_duyet_don',views.tatCaDuyetDon,name='tat-ca-duyet-don'),
     path('tat_ca_don_da_duyet', views.tatCaDonDaDuyet, name='tat-ca-don-da-duyet'),
     path('tat_ca_don_da_huy', views.tatCaDonDahuy, name='tat-ca-don-da-huy'),
+    path('product_list', views.listProduct, name='product-list'),
+    path('product_create', views.createProduct, name='product-create'),
+    path('product_update/<int:id>', views.updateProduct, name='product-update'),
+    path('product_delete/<int:id>', views.deleteProduct, name='product-delete'),
 ]

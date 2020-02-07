@@ -1,3 +1,7 @@
+
+USE_THOUSAND_SEPARATOR = True
+NUMBER_GROUPING = 3
+...............
 TIME_ZONE = 'Asia/Ho_Chi_Minh'
 LANGUAGE_CODE = 'vi-vn'
 STATICFILES_DIRS =[

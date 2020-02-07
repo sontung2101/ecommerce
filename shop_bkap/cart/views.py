@@ -127,7 +127,7 @@ class shoppingcart(View):
     checkout = False
 
     def get(self, request):
-        # print(request.session.get('cart'))
+        print(request.session.get('cart'))
         total = 0
         carts = request.session.get('cart')
         if carts:

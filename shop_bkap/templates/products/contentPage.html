@@ -2,7 +2,7 @@
 {% load static %}
 {% load custom_filter %}
 {% load humanize %}
-<section class="bgwhite p-t-55 p-b-65">
+<section class="bgwhite p-t-30 p-b-20">
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
@@ -46,45 +46,80 @@
                     </div>
 
                     <!--  -->
-                    <h4 class="m-text14 p-b-32">
+                    <h4 class="m-text14 p-b-10">
                         Filters
                     </h4>
 
-                    <div class="filter-price p-t-22 p-b-50 bo3">
-                        <div class="m-text15 p-b-17">
-                            Price
-                        </div>
+                    <div class="flex-sb-m flex-w p-b-35 panel-group category-products">
+                        <form>
+                            <div class="mt-2 ">
+                                <div>
+                                    <label class='label-title'>Name Product</label>
+                                </div>
+                                <div class="rs2-select2 bo4 of-hidden  m-t-5 m-b-5 m-r-10">
 
-                        <div class="wra-filter-bar">
-                            <div id="filter-bar"></div>
-                        </div>
-
-                        <div class="flex-sb-m flex-w p-t-16">
-                            <div class="w-size11">
-                                <!-- Button -->
-                                <button class="flex-c-m size4 bg7 bo-rad-15 hov1 s-text14 trans-0-4">
-                                    Filter
-                                </button>
+                                    <input style="border: 1px solid #5e5e5e" name='product_name'
+                                           value="{{ queryParams.product_name }}" class="s-text7 size6 p-l-23 p-r-50"
+                                           placeholder="name product">
+                                </div>
                             </div>
 
-                            <div class="s-text3 p-t-10 p-b-10">
-                                Range: $<span id="value-lower">610</span> - $<span id="value-upper">980</span>
+                            <div class="mt-4 ">
+                                <div><label class='label-title'>Type product</label></div>
+                                <div class="rs2-select2 bo4 of-hidden  m-t-5 m-b-5 m-r-10">
+                                    <select name='category_id' class="selection-2">
+                                        <option value="">All</option>
+                                        {% for c in categoryList %}
+                                            <option {% if c.id == queryParams.category_id|add:0 %} selected {% endif %}
+                                                                                                   value="{{ c.id }}">{{ c.name }}</option>
+                                        {% endfor %}
+                                        <!-- add chuyển từ string sang số nguyên -->
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
+                            <div class="mt-4">
+                                <div>
+                                    <label class='label-title'>Range</label>
+                                </div>
+                                <div class="rs2-select2 bo4 of-hidden  m-t-5 m-b-5 m-r-10">
+                                    <select name='price_range' class="selection-2">
+                                        <option value="">All</option>
+                                        <option {% if queryParams.price_range == '1' %} selected {% endif %} value="1">
+                                            0.00 - 500K
+                                        </option>
+                                        <option {% if queryParams.price_range == '2' %} selected {% endif %} value="2">
+                                            500K - 1Tr
+                                        </option>
+                                        <option {% if queryParams.price_range == '3' %} selected {% endif %} value="3">
+                                            1Tr - 2Tr
+                                        </option>
+                                        <option {% if queryParams.price_range == '4' %} selected {% endif %} value="4">
+                                            2Tr +
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
 
-                    <div class="search-product pos-relative bo4 of-hidden">
-                        <form action="{% url 'product:search-product' %}" method="GET">
-{#                            {% csrf_token %}#}
-                            <input class="s-text7 size6 p-l-23 p-r-50" type="text" value="{{product_name    }}" name="search-product"
-                                   placeholder="Search Products...">
-
-                            <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
-                                <i class="fs-12 fa fa-search" aria-hidden="true"></i>
-                            </button>
+                            <br>
+                            <button class="btn btn-dark">Search</button>
                         </form>
                     </div>
+
+
+                    {#                    <div class="search-product pos-relative bo4 of-hidden">#}
+                    {##}
+                    {#                        <form action="{% url 'product:search-product' %}" method="GET">#}
+                    {#                            {% csrf_token %}#}
+                    {#                            <input class="s-text7 size6 p-l-23 p-r-50" type="text" value="{{ product_name }}"#}
+                    {#                                   name="search-product"#}
+                    {#                                   placeholder="Search Products...">#}
+                    {##}
+                    {#                            <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">#}
+                    {#                                <i class="fs-12 fa fa-search" aria-hidden="true"></i>#}
+                    {#                            </button>#}
+                    {#                        </form>#}
+                    {#                    </div>#}
 
 
                 </div>
@@ -92,28 +127,28 @@
 
             <div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
                 <!--  -->
-                <div class="flex-sb-m flex-w p-b-35">
+                <div class="flex-sb-m flex-w p-b-10">
                     <div class="flex-w">
-                        <div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
-                            <select class="selection-2" name="sorting">
-                                <option>Default Sorting</option>
-                                <option>Popularity</option>
-                                <option>Price: low to high</option>
-                                <option>Price: high to low</option>
-                            </select>
-                        </div>
-
-                        <div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
-                            <select class="selection-2" name="sorting">
-                                <option>Price</option>
-                                <option>$0.00 - $50.00</option>
-                                <option>$50.00 - $100.00</option>
-                                <option>$100.00 - $150.00</option>
-                                <option>$150.00 - $200.00</option>
-                                <option>$200.00+</option>
-
-                            </select>
-                        </div>
+                        {#                        <div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">#}
+                        {#                            <select class="selection-2" name="sorting">#}
+                        {#                                <option>Default Sorting</option>#}
+                        {#                                <option>Popularity</option>#}
+                        {#                                <option>Price: low to high</option>#}
+                        {#                                <option>Price: high to low</option>#}
+                        {#                            </select>#}
+                        {#                        </div>#}
+                        {##}
+                        {#                        <div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">#}
+                        {#                            <select class="selection-2" name="sorting">#}
+                        {#                                <option>Price</option>#}
+                        {#                                <option>$0.00 - $50.00</option>#}
+                        {#                                <option>$50.00 - $100.00</option>#}
+                        {#                                <option>$100.00 - $150.00</option>#}
+                        {#                                <option>$150.00 - $200.00</option>#}
+                        {#                                <option>$200.00+</option>#}
+                        {##}
+                        {#                            </select>#}
+                        {#                        </div>#}
                     </div>
 
                     <span class="s-text8 p-t-5 p-b-5" style="color: #007bff ;font-size: 18px">
@@ -127,8 +162,8 @@
                         <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
                             <!-- Block2 -->
                             <div class="block2">
-                                <div class="block2-img wrap-pic-w of-hidden pos-relative {% if product.new == 0 %} block2-labelnew {% elif product.promotion_price != 0 and product.new == 1 %} block2-labelsale {% else %}{% endif %}">
-                                    <img src="/media/products/{{ product.image }}" alt="IMG-PRODUCT">
+                                <div class="block2-img wrap-pic-w of-hidden pos-relative {% if product.new == 1 %} block2-labelnew {% elif product.promotion_price != 0 and product.new == 0 %} block2-labelsale {% else %}{% endif %}">
+                                    <img src="{{ product.image.url }}" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
@@ -164,21 +199,26 @@
                         </div>
                     {% endfor %}
                 </div>
-                <div class="pagination flex-m flex-w p-t-26 ">
+                <div class="pagination flex-m flex-w p-t-15 ">
                             <span class="step-links">
-                                {% if products.has_previous %}
-                                    <a href="?page=1" style="font-size: 17px">&laquo; first</a>
-                                    <a href="?page={{ products.previous_page_number }} " style="font-size: 17px">previous</a>
-                                {% endif %}
-                                {% if check_search == None %}
-                                <p class="current" style="float: left;font-size: 17px;color: #007bff">
-                                    Page {{ products.number }} of {{ products.paginator.num_pages }}.
-                                </p>
-                                {% endif %}
+                                {% if num_pages > 1 %}
+                                    <a class="" href="?product_name={{queryParams.product_name}}&category_id={{ queryParams.category_id }}&price_range={{ queryParams.price_range }}&page=1" style="float:left"><h1>&laquo;&nbsp; </h1></a>
 
-                                {% if products.has_next %}
-                                    <a href="?page={{ products.next_page_number }}" style="font-size: 17px">next</a>
-                                    <a href="?page={{ products.paginator.num_pages }} " style="font-size: 17px">last &raquo;</a>
+                                    {% if page > 1 %}
+                                        <a class="" href="?product_name={{queryParams.product_name}}&category_id={{ queryParams.category_id }}&price_range={{ queryParams.price_range }}&page={{ page|add:-1 }}" style="float:left"><h1>&lsaquo;&nbsp;</h1></a>
+                                    {% else %}
+                                        <a class="" style="float:left"><h1>&lsaquo;&nbsp;</h1></a>
+                                    {% endif %}
+
+                                    {% if page < num_pages %}
+                                        <a style="float:left" class="" href="?product_name={{queryParams.product_name}}&category_id={{ queryParams.category_id }}&price_range={{ queryParams.price_range }}&page={{ page|add:1 }}"><h1>&rsaquo;&nbsp;</h1></a>
+                                    {% else %}
+                                        <a class="" style="float:left"><h1>&rsaquo;&nbsp;</h1></a>
+                                    {% endif %}
+
+                                    <a class="" style="float:left" href="?product_name={{queryParams.product_name}}&category_id={{ queryParams.category_id }}&price_range={{ queryParams.price_range }}&page={{ num_pages }}"><h1>&raquo;&nbsp;</h1></a>
+                                    <br>
+                                    <span>Page {{ page }} of {{ num_pages }}</span>
                                 {% endif %}
                             </span>
                 </div>

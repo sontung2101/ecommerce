@@ -7,7 +7,7 @@ from product.models import *
 # Create your views here.
 def index(request):
     slide_list = Slide.objects.all()
-    new_product = Products.objects.filter(new=0)[:10]
+    new_product = Products.objects.filter(new=1)[:10]
     slide = {"sl": slide_list,"products":new_product}
     return render(request, 'index/index.html', slide)
 

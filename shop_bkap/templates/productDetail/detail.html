@@ -8,23 +8,14 @@
 					<div class="wrap-slick3-dots"></div>
 
 					<div class="slick3">
-						<div class="item-slick3" data-thumb="/media/products/{{ products.image }}">
+                        {% for i in products.images_set.all  %}
+						<div class="item-slick3" data-thumb="{{i.image.url}}">
 							<div class="wrap-pic-w">
-								<img src="/media/products/{{ products.image }}" alt="IMG-PRODUCT">
+								<img src="{{i.image.url}}" alt="IMG-PRODUCT">
 							</div>
 						</div>
+                        {% endfor %}
 
-						<div class="item-slick3" data-thumb="/media/products/2{{ products.image }}">
-							<div class="wrap-pic-w">
-								<img src="/media/products/2{{ products.image }}" alt="IMG-PRODUCT">
-							</div>
-						</div>
-
-						<div class="item-slick3" data-thumb="/media/products/3{{ products.image }}">
-							<div class="wrap-pic-w">
-								<img src="/media/products/3{{ products.image }}" alt="IMG-PRODUCT">
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -45,12 +36,6 @@
                     {{ products.promotion_price|intcomma }} VNĐ
                 </span>
                 {% endif %}
-
-
-				<p class="s-text8 p-t-10">
-					{{ products.description }}
-				</p>
-
 				<!--  -->
 				<div class="p-t-33 p-b-60">
 					<div class="flex-m flex-w p-b-10">

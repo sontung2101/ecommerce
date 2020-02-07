@@ -20,7 +20,7 @@
                             <td class="column-1">
                                 <a href="{% url 'cart:deleteCart' key  %}">
                                 <div class="cart-img-product b-rad-4 o-f-hidden">
-                                    <img src="/media/products/{{ value.img }}" alt="IMG-PRODUCT">
+                                    <img src="/media/{{ value.img }}" alt="IMG-PRODUCT">
                                 </div></a>
                             </td>
                             <td class="column-3">{{ value.name }}</td>
