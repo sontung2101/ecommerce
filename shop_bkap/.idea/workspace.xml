@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8492aae2-6fe1-49e5-9669-9b0005a4f856" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ProDjango.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ProDjango.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminshop/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminshop/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminshop/templates/order-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminshop/templates/order-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminshop/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminshop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminshop/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_bkap/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop_bkap/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop_bkap/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop_bkap/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cart/totalCart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/totalCart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/productDetail/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/productDetail/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/productDetail/relateProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/productDetail/relateProduct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/products/contentPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/contentPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/order_management_son.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/order_management_son.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/widgets/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/widgets/header.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -228,7 +208,7 @@
       <workItem from="1580619914069" duration="615000" />
       <workItem from="1580801266170" duration="825000" />
       <workItem from="1580870436958" duration="24055000" />
-      <workItem from="1581037893351" duration="4550000" />
+      <workItem from="1581037893351" duration="7284000" />
     </task>
     <servers />
   </component>
