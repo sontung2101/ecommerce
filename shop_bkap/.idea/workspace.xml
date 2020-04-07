@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8492aae2-6fe1-49e5-9669-9b0005a4f856" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../db_test4.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,6 +45,7 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -208,7 +211,11 @@
       <workItem from="1580619914069" duration="615000" />
       <workItem from="1580801266170" duration="825000" />
       <workItem from="1580870436958" duration="24055000" />
-      <workItem from="1581037893351" duration="7284000" />
+      <workItem from="1581037893351" duration="7905000" />
+      <workItem from="1581841346644" duration="123000" />
+      <workItem from="1583849808726" duration="331000" />
+      <workItem from="1586245369483" duration="3596000" />
+      <workItem from="1586249381883" duration="94000" />
     </task>
     <servers />
   </component>

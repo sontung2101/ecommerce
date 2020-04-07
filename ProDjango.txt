@@ -1,3 +1,5 @@
+pip freeze>requirements.txt
+
 
 USE_THOUSAND_SEPARATOR = True
 NUMBER_GROUPING = 3
