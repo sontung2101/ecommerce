@@ -1,1 +1,2 @@
-# ecommerce
+Python-Django-Ecommerce
+By TungNS
